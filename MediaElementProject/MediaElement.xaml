@@ -3,8 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:MediaElementProject"
-        mc:Ignorable="d"
         Title="BCIT - Media Element with User Controls" Height="500" Width="500" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
@@ -16,26 +14,20 @@
             <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
         <Grid.Background>
-            <LinearGradientBrush EndPoint="0.185,0.016" StartPoint="0.189,0.984">
+            <LinearGradientBrush EndPoint="0.185,0.016" 
+                                 StartPoint="0.189,0.984">
                 <GradientStop Color="Black"/>
-                <GradientStop Color="#FF0C1099" Offset="0.624"/>
+                <GradientStop Color="#FF0C1099" 
+                              Offset="0.624"/>
             </LinearGradientBrush>
         </Grid.Background>
         <MediaElement x:Name="MyMediaElement" 
                       LoadedBehavior="Manual"
                       Source="Resources/Running.avi"
-                      Height="300" Margin="89.6,85.2,79.2,85.2"
+                      Height="300"
+                      Width="300"
+                      Margin="89.6,85.2,79.2,85.2"
                       Grid.Column="0" Grid.Row="0"/>
-        <Rectangle HorizontalAlignment="Right" Height="32" Margin="0,0,149,48.2" Stroke="Black" VerticalAlignment="Bottom" Width="38.4" RenderTransformOrigin="0.489,0.452" RadiusY="5.9" RadiusX="5.9">
-            <Rectangle.Fill>
-                <LinearGradientBrush EndPoint="0.463,1.034" StartPoint="0.441,-0.108">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="White" Offset="0.736"/>
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <local:ButtonStyle2 x:Name="playBtn" HorizontalAlignment="Left" Height="32" Margin="161.6,0,0,48.2" VerticalAlignment="Bottom" Width="38.4" Style="{DynamicResource ButtonStyle2}" MouseLeftButtonDown="playBtn_MouseLeftButtonDown"/>
-        <!-- Below button is for test purpose only -->
-        <Button x:Name="btnTest" Grid.Row="1" Grid.Column="1" Content="Click Me!" Width="50" Height="50" Click="btnTest_Click"></Button>
+
     </Grid>
 </Window>

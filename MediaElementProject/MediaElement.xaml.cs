@@ -12,22 +12,9 @@ namespace MediaElementProject
         {
             InitializeComponent();
             //playBtn.Click += new RoutedEventHandler(playBtn_Click);
-           // MyMediaElement.Play();
+           MyMediaElement.Play();
         }
 
-        void playBtn_Click(object sender, RoutedEventArgs e)
-        {
-            MyMediaElement.Play();
-        }
-
-        private void playBtn_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            MyMediaElement.Play();
-        }
-
-        private void btnTest_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("I was clicked","Message from Click Button",MessageBoxButton.OK, MessageBoxImage.Information);
-        }
+       
     }
 }
