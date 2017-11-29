@@ -1,12 +1,13 @@
 ﻿using System.Windows;
 using System;
 using System.Windows.Input;
-
+/// <summary>
+/// Krzysztof Szczurowski
+/// BCIT: WPF COMP 3608
+/// Repo address: https://github.com/kriss3/BCIT_WPF_COMP3608_Week3Lab4_MediaElement.git
+/// </summary>
 namespace MediaElementProject
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MediaElement : Window
     {
         private bool _isPaused = true;
@@ -55,16 +56,10 @@ namespace MediaElementProject
         private void ToggleBtn_Click(object sender, RoutedEventArgs e)
         {
             if (_myVideo == "Resources/Running.avi")
-            {
-                //set _vdieoVar to the next video              
-                _myVideo = "Resources/toy_plane_liftoff.avi";
-                // create a var called src of the type Uri              
-                // set the source of the Uri to the new video              
-                // inform it that the Uri is a Relative path             
-                Uri src = new Uri("Resources/toy_plane_liftoff.avi", UriKind.Relative);
-                // set MyMediaElement's Source                  
-                MyMediaElement.Source = src;
-                // Tell the MediaElement to play                 
+            {     
+                _myVideo = "Resources/toy_plane_liftoff.avi";    
+                Uri src = new Uri("Resources/toy_plane_liftoff.avi", UriKind.Relative);                
+                MyMediaElement.Source = src;               
                 MyMediaElement.Play();
             }
             else
